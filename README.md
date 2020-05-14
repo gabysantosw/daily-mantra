@@ -11,8 +11,8 @@ Using: Vue (+Vue CLI), Fetch API and get data from a public Google Sheet.
 ## Current state
 
 ### v0.1.1 - UI design
-- [ ] Implement base design
-- [ ] Show loading screen
+- [x] Implement base design
+- [x] Reveal animation to ease the user's wait
 
 ## Roadmap (upcoming)
 

@@ -9,4 +9,4 @@ $mono-font: 'Roboto Mono', monospace;
 $display-font: 'Special Elite', sans-serif;
 
 // spacing
-$main-pad: 1rem;
+$main-pad: calc(1rem + 1vw);

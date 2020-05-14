@@ -1,7 +1,7 @@
 <template>
   <header class="header">
-    <img class="header__logo" alt="Vue logo" src="@/assets/logo.png" />
-    <time class="header__time" dataset="2020-05-12">{{ displayDate }}</time>
+    <img class="header__logo" alt="Daily Mantra." src="@/assets/logo.svg" />
+    <time class="header__date" dataset="2020-05-12">{{ displayDate }}</time>
   </header>
 </template>
 
@@ -36,12 +36,19 @@ export default {
 
 <style lang="scss">
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: $main-pad;
+
   &__logo {
-    width: 2rem;
+    width: 3rem;
     height: 2rem;
   }
-  // &__time {
-
-  // }
+  &__date {
+    font-size: 1rem;
+    font-family: $mono-font;
+  }
 }
 </style>

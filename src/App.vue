@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <AppHeader :currentDate="currentDate" />
-    <AppQuote :isNewDay="isNewDay" />
+  <div id="app" class="wrapper">
     <AppBackground />
+    <div class="content">
+      <AppHeader :currentDate="currentDate" />
+      <AppQuote :isNewDay="isNewDay" />
+    </div>
   </div>
 </template>
 
@@ -46,4 +48,47 @@ body {
   font-family: $mono-font;
   color: $dark;
 }
+
+.wrapper {
+  // position: relative;
+  // overflow: hidden;
+
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 12vh;
+
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: $dark;
+  //   border-radius: 10vh 10vh 0 0;
+
+  //   animation: 1000ms reveal forwards;
+  // }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  width: 40rem;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: $main-pad;
+  box-sizing: border-box;
+
+  animation: 1000ms display backwards;
+}
+
+// @keyframes reveal {
+//   50% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateY(100%);
+//   }
+// }
 </style>

@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <p>
-      <q>{{ quote }}</q>
-      <span> - {{ author }}</span>
-    </p>
-  </div>
+  <p class="quote">
+    <q class="quote__text">{{ quote }}</q>
+    <span class="quote__author"> - {{ author }}</span>
+  </p>
 </template>
 
 <script>
@@ -42,4 +40,30 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.quote {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $display-font;
+
+  animation: 1000ms 1000ms display backwards;
+
+  &__text {
+    padding: 0 0.5em;
+    margin-top: auto;
+    margin-bottom: 2em;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  &__author {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: 1.25rem;
+  }
+}
+</style>
