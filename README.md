@@ -1,7 +1,5 @@
 # Daily Mantra
 
-TEST
-
 Simple webapp that shows you a new 'mantra' to use as a pilar of motivation through the day.
 
 ## Implementation
