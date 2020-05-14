@@ -49,24 +49,24 @@ body {
   color: $dark;
 }
 
-.wrapper {
-  // position: relative;
-  // overflow: hidden;
+// .wrapper {
+//   // position: relative;
+//   // overflow: hidden;
 
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   left: 0;
-  //   top: 12vh;
+//   // &:after {
+//   //   content: '';
+//   //   position: absolute;
+//   //   left: 0;
+//   //   top: 12vh;
 
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: $dark;
-  //   border-radius: 10vh 10vh 0 0;
+//   //   width: 100%;
+//   //   height: 100%;
+//   //   background-color: $dark;
+//   //   border-radius: 10vh 10vh 0 0;
 
-  //   animation: 1000ms reveal forwards;
-  // }
-}
+//   //   animation: 1000ms reveal forwards;
+//   // }
+// }
 
 .content {
   display: flex;
