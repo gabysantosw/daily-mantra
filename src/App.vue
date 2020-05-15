@@ -20,6 +20,18 @@ export default {
   // if not -> same quote
   components: { AppHeader, AppBackground, AppQuote },
   created() {
+    // get innerHeight from window
+    window.addEventListener('load', () => {
+      let innerHeight = window.innerHeight;
+      document.documentElement.style.setProperty('--100vh', `${innerHeight}px`);
+    });
+
+    // handle window resizes
+    window.addEventListener('resize', () => {
+      let innerHeight = window.innerHeight;
+      document.documentElement.style.setProperty('--100vh', `${innerHeight}px`);
+    });
+
     // check localStorage
     let lastDate = new Date(JSON.parse(localStorage.getItem('lastDate')));
     this.currentDate = new Date();
@@ -74,7 +86,8 @@ body {
 
   width: 40rem;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; // fallback
+  min-height: var(--100vh);
   margin: 0 auto;
   padding: $main-pad;
   box-sizing: border-box;

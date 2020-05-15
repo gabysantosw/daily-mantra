@@ -1,5 +1,8 @@
 <template>
   <p class="quote">
+    <span class="alert" v-if="!successfulLoad"
+      >The quotes are not loading right now, sorry! :( Still, I hope you:</span
+    >
     <q class="quote__text">{{ quote }}</q>
     <span class="quote__author"> - {{ author }}</span>
   </p>
@@ -23,6 +26,11 @@ export default {
           localStorage.setItem('lastQuote', JSON.stringify(todaysQuote));
           this.author = todaysQuote[0];
           this.quote = todaysQuote[1];
+          this.successfulLoad = true;
+        })
+        .catch(error => {
+          this.successfulLoad = false;
+          console.error(error);
         });
     } else {
       // get quote from localStorage
@@ -33,8 +41,10 @@ export default {
   },
   data() {
     return {
-      author: '',
-      quote: ''
+      // default quote
+      author: 'Me',
+      quote: 'Have a great day!',
+      successfulLoad: false
     };
   }
 };
@@ -54,16 +64,22 @@ export default {
   animation: 1000ms 1000ms display backwards;
 
   &__text {
-    padding: 0 0.5em;
-    margin-top: auto;
-    margin-bottom: 2em;
+    padding: 0 0.5em 1em 0.5em;
+    margin: auto 0;
     font-size: 2.5rem;
     text-align: center;
   }
   &__author {
     align-self: flex-end;
-    margin-top: auto;
     font-size: 1.25rem;
   }
+}
+.alert {
+  position: absolute;
+  top: 30vh;
+  width: 40ch;
+  max-width: 100%;
+  font-family: $mono-font;
+  text-align: center;
 }
 </style>
