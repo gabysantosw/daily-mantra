@@ -4,19 +4,27 @@ Simple webapp that shows you a new 'mantra' to use as a pilar of motivation thro
 
 ## Implementation
 
-Using: Vue (+Vue CLI), Fetch API and get data from a public Google Sheet.
+Design: Figma
+
+Development: Vue (+Vue CLI), Fetch API and get data from a public Google Sheet.
+
+Images: Textures collection by [Annie Spratt](https://unsplash.com/collections/2063492/backgrounds-and-textures-%F0%9F%8E%86)
 
 ## Current state
 
-### v0.1.1 - UI design
-- [x] Implement base design
-- [x] Reveal animation to ease the user's wait
+### v0.1.2 - Bug fixes
+- [ ] Handle fetching errors
+- [ ] Height overflow
 
 ## Roadmap (upcoming)
 
 ### 
 
 ## Timeline (releases)
+
+### v0.1.1 - UI design
+- [x] Implement base design
+- [x] Reveal animation to ease the user's wait
 
 ### v0.1.0 - MVP
 - [x] Display a quote and show today's date
