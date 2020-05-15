@@ -3,8 +3,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss">
@@ -13,7 +12,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: $light;
   background-image: url(https://images.unsplash.com/photo-1524311514036-57856b08ffd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80);
   background-size: cover;

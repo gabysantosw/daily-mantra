@@ -1,7 +1,7 @@
 <template>
   <p class="quote">
-    <span class="alert" v-if="!successfulLoad"
-      >The quotes are not loading right now, sorry! :( Still, I hope you:</span
+    <span class="alert" v-if="!successfulLoad">
+      The quotes are not loading right now, sorry! :( Still, I hope you:</span
     >
     <q class="quote__text">{{ quote }}</q>
     <span class="quote__author"> - {{ author }}</span>
@@ -33,6 +33,7 @@ export default {
           console.error(error);
         });
     } else {
+      this.successfulLoad = true;
       // get quote from localStorage
       const lastQuote = JSON.parse(localStorage.getItem('lastQuote'));
       this.author = lastQuote[0];
@@ -66,7 +67,7 @@ export default {
   &__text {
     padding: 0 0.5em 1em 0.5em;
     margin: auto 0;
-    font-size: 2.5rem;
+    font-size: calc(2rem + 1vh);
     text-align: center;
   }
   &__author {
