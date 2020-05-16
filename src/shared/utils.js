@@ -1,9 +1,3 @@
-export const getQuote = data => {
-  const quoteList = handleSheet(data);
-  const selectedIndex = randomNumber(quoteList.length);
-  return quoteList[selectedIndex];
-};
-
 // cleans data and returns the content of the sheet
 // as an array of arrays
 export const handleSheet = data => {

@@ -9,7 +9,13 @@
 </template>
 
 <script>
-import { getQuote } from '@/shared/utils.js';
+import { handleSheet, randomNumber } from '@/shared/utils.js';
+
+const getQuote = data => {
+  const quoteList = handleSheet(data);
+  const selectedIndex = randomNumber(quoteList.length);
+  return quoteList[selectedIndex];
+};
 
 export default {
   props: {
