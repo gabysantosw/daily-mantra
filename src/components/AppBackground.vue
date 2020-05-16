@@ -16,7 +16,7 @@ export default {
       const randomTexture = this.textures[randomNumber(this.textures.length)];
 
       this.setProperty('color', randomColor);
-      this.setProperty('color', randomTexture);
+      this.setProperty('texture', randomTexture);
 
       // save to localStorage
       localStorage.setItem(
