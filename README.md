@@ -22,6 +22,7 @@ Images: Textures collection by [Annie Spratt](https://unsplash.com/collections/2
 ### v0.1.3 - Randomized background
 - [x] Generate random color-texture pairs
 - [x] Save style to local storage with each quote
+- [x] Refactoring
 
 ### v0.1.2 - Bug fixes
 - [x] Handle fetching errors
