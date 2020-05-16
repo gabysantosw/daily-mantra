@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="wrapper">
-    <AppBackground />
+    <AppBackground :isNewDay="isNewDay" />
     <div class="content">
       <AppHeader :currentDate="currentDate" />
       <AppQuote :isNewDay="isNewDay" />
@@ -23,13 +23,19 @@ export default {
     // get innerHeight from window
     window.addEventListener('load', () => {
       let innerHeight = window.innerHeight;
-      document.documentElement.style.setProperty('--100vh', `${innerHeight}px`);
+      document.documentElement.style.setProperty(
+        '--fullHeight',
+        `${innerHeight}px`
+      );
     });
 
     // handle window resizes
     window.addEventListener('resize', () => {
       let innerHeight = window.innerHeight;
-      document.documentElement.style.setProperty('--100vh', `${innerHeight}px`);
+      document.documentElement.style.setProperty(
+        '--fullHeight',
+        `${innerHeight}px`
+      );
     });
 
     // check localStorage
@@ -54,6 +60,10 @@ export default {
 
 <style lang="scss">
 @import '@/Sass/main.scss';
+
+:root {
+  --fullHeight: 100vh;
+}
 
 body {
   background-color: $light;
@@ -87,7 +97,7 @@ body {
   width: 40rem;
   max-width: 100%;
   min-height: 100vh; // fallback
-  min-height: var(--100vh);
+  min-height: var(--fullHeight);
   margin: 0 auto;
   padding: $main-pad;
   box-sizing: border-box;
