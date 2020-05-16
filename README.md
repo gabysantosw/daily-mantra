@@ -12,15 +12,16 @@ Images: Textures collection by [Annie Spratt](https://unsplash.com/collections/2
 
 ## Current state
 
-### v0.1.3 - Randomized background
-- [ ] Generate random color-texture pairs
-- [ ] Save style to local storage with each quote
+### v0.1.4 - Info section
 
 ## Roadmap (upcoming)
 
-### v0.1.4 - Info section
 
 ## Timeline (releases)
+
+### v0.1.3 - Randomized background
+- [x] Generate random color-texture pairs
+- [x] Save style to local storage with each quote
 
 ### v0.1.2 - Bug fixes
 - [x] Handle fetching errors
